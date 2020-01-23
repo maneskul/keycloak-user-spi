@@ -1,0 +1,8 @@
+echo DOTZ-SETUP: Begin Keycloak configuration...
+
+embed-server --server-config=standalone-ha.xml --std-out=echo
+/subsystem=keycloak-server/spi=user:add()
+/subsystem=keycloak-server/spi=user/provider=dotz-user-spi:add(enabled=true)
+/subsystem=keycloak-server/spi=user/provider=dotz-user-spi:write-attribute(name=properties.someProperty,value=helloworld)
+
+echo DOTZ-SETUP: Completed
