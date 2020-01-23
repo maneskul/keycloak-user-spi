@@ -24,7 +24,7 @@ public class DemoUserStorageProviderFactory implements UserStorageProviderFactor
 
     @Override
     public String getId() {
-        return "demo-user-provider";
+        return "dotz-user-provider";
     }
 
     @Override
